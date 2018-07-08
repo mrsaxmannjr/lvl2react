@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Toggle from './ToggleRPC';
 import Portal from './Portal';
+import Modal from './Modal';
 
 class App extends Component {
   render() {
@@ -10,15 +11,28 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">
+            Welcome to React
+          </h1>
         </header>
+        <Modal />
         <Toggle>
           {({ on, toggle }) => (
             <Fragment>
-              {on && <h1>Show ME</h1>}
-              <button onClick={toggle}>Show/Hide</button>
+              {on && (
+                <h1>
+                  Show ME
+                </h1>
+              )}
+              <button onClick={toggle}>
+                Show/Hide
+              </button>
               <Portal>
-                {on && <h1>Hi, I'm in a portal</h1>}
+                {on && (
+                  <h1>
+                    Hi, I'm in a portal
+                  </h1>
+                )}
               </Portal>
             </Fragment>
           )}
