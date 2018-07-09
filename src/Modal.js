@@ -4,13 +4,15 @@ import Portal from './Portal';
 
 export default class Modal extends Component {
   render() {
+    const { children, toggle, on } = this.props;
     return (
       <Portal>
-        <ModalWrapper>
-          <h1>
-            Hi, I'm a friggin modal
-          </h1>
-        </ModalWrapper>
+        {on &&
+          <ModalWrapper>
+            <button onClick={toggle}>Close</button>
+            <div>{children}</div>
+          </ModalWrapper>
+        }
       </Portal>
     );
   }
