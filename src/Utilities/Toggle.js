@@ -9,7 +9,7 @@ export default class Toggle extends Component {
     this.setState({
       on: !this.state.on
     });
-    console.log("tst");
+    console.log('tst');
 
   };
 
